@@ -6,9 +6,12 @@ export default class ContactAndContract extends LightningElement {
     contact = {};
     contract = {};
 
+    //TESTE
+
     @wire(getContactAndContract, { recordId: '$recordId' })
     wiredGetContactAndContract({ error, data }) {
         if (data) {
+            this.ariaColCount;
             this.contact = data.contact;
             this.contract = data.contract;
         } else if (error) {
